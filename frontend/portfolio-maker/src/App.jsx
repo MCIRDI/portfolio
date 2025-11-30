@@ -1,0 +1,172 @@
+import { useState } from 'react'
+import mainLogo from './assets/icon-placeholder.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
+
+function App() {
+    const [page, setPage] = useState(0);
+    return (
+        <>
+            <header>
+                <div className="header-content">
+                    <div className="logo-block">
+                        <img src={mainLogo} alt="logo"></img>
+                    </div>
+                    <div className="landing-menu">
+                        <button className={page === 0 ? "button-active" : ""} type="button" onClick={() => setPage(0)} >HOME</button>
+                        <button className={page === 1 ? "button-active" : ""} type="button" onClick={() => setPage(1)}>CONSTRUCTOR</button>
+                        <button className={page === 2 ? "button-active" : ""} type="button" onClick={() => setPage(2)} >PORTFOLIOS</button>
+                    </div>
+                    <div className="register-section">
+                        <button>Sign in</button>
+                    </div>
+                </div>
+
+
+            </header >
+            <div className="landing-block">
+                <div className={`landing-block-content ${page === 0 ? "active" : ""}`}>
+                    <div className="landing-text-image">
+                        <div className="landing-text-home">
+                            <h1>Welcome to PortfolioMaker!</h1>
+                            <p>Looking for apealing portfolio? You are in the right place! We offer high customization abilities and hosting.</p>
+                        </div>
+                        <div className="landing-image-home">
+                            <img src={mainLogo} alt="logo"></img>
+                        </div>
+                    </div>
+
+                    <div className="landing-text-address">
+                        <a href=" /">Explore services today!</a>
+                        <a href=" /" className="landing-arrow">
+                        <svg width="800px" height="800px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 10L8 14L6 14L-2.62268e-07 8L6 2L8 2L8 6L16 6L16 10L8 10Z" fill="#4c04b8" />
+                            </svg>
+                        </a>
+                    </div>
+
+
+
+                    <div className="landing-text-image">
+                        <div className="landing-image-home">
+                            <img src={mainLogo} alt="logo"></img>
+                        </div>
+                        <div className="landing-text-home">
+                            <h1>Where to start?</h1>
+                            <p>Firstly create your account. We offer our services only to registered users. </p>
+                        </div>
+
+                    </div>
+
+                    <div className="landing-text-address">
+                        <a href=" /">Create account!</a>
+                        <a href=" /" className="landing-arrow">
+                        <svg width="800px" height="800px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 10L8 14L6 14L-2.62268e-07 8L6 2L8 2L8 6L16 6L16 10L8 10Z" fill="#4c04b8" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div className={`landing-block-content ${page === 1 ? "active" : ""}`}>
+                    <div className="landing-text-image">
+                        <div className="landing-image-home">
+                            <img src={mainLogo} alt="logo"></img>
+                        </div>
+                        <div className="landing-text-home">
+                            <h1>Easy-to-use constructor!</h1>
+                            <p>Do not know how to use tool? Don`t worry! Interface of editor can be handled easily without hundred paged guides! </p>
+                        </div>
+
+                    </div>
+
+                    <div className="landing-text-address">
+                        <a href=" /">Start now!</a>
+                        <a href=" /" className="landing-arrow">
+                            <svg width="800px" height="800px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 10L8 14L6 14L-2.62268e-07 8L6 2L8 2L8 6L16 6L16 10L8 10Z" fill="#4c04b8" />
+                            </svg>
+                        </a>
+                    </div>
+
+
+
+                    <div className="landing-text-image">
+
+                        <div className="landing-text-home">
+                            <h1>Wide customization abilities!</h1>
+                            <p>Tool is provided with many basic templates. The variaty may be expanded by user templates.</p>
+                        </div>
+                        <div className="landing-image-home">
+                            <img src={mainLogo} alt="logo"></img>
+                        </div>
+                    </div>
+
+                    <div className="landing-text-address">
+                        <a href=" /">Create new portfolio!</a>
+                        <a href=" /" className="landing-arrow">
+                            <svg width="800px" height="800px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 10L8 14L6 14L-2.62268e-07 8L6 2L8 2L8 6L16 6L16 10L8 10Z" fill="#4c04b8" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div className={`landing-block-content ${page === 2 ? "active" : ""}`}>
+                    <div className="landing-text-image">
+                        <div className="landing-text-home">
+                            <h1>Deploy your portfolio on platform!</h1>
+                            <p>In case you forgot to take portfolio on job interview, you always can rely on our service! After creation, your portfolio may be seen by anybody you wish</p>
+                        </div>
+                        <div className="landing-image-home">
+                            <img src={mainLogo} alt="logo"></img>
+                        </div>
+                    </div>
+
+                    <div className="landing-text-address">
+                        <a href=" /">Create portfolio</a>
+                        <a href=" /" className="landing-arrow">
+                            <svg width="800px" height="800px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 10L8 14L6 14L-2.62268e-07 8L6 2L8 2L8 6L16 6L16 10L8 10Z" fill="#4c04b8" />
+                            </svg>
+                        </a>
+                    </div>
+
+
+
+                    <div className="landing-text-image">
+                        <div className="landing-image-home">
+                            <img src={mainLogo} alt="logo"></img>
+                        </div>
+                        <div className="landing-text-home">
+                            <h1>Privacy</h1>
+                            <p>If you don`t want to publish your work, than you can download it or leave on web application. We guarantee security of user information</p>
+                        </div>
+
+                    </div>
+
+                    <div className="landing-text-address">
+                        <a href=" /">Create account!</a>
+                        <a href=" /" className="landing-arrow">
+                            <svg width="800px" height="800px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 10L8 14L6 14L-2.62268e-07 8L6 2L8 2L8 6L16 6L16 10L8 10Z" fill="#4c04b8" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <footer >
+                <div className="footer-content">
+                    <p>&copy; 2025 PortfolioMaker. All rights reserved.</p>
+                </div>
+            </footer>
+
+        </>
+    )
+}
+
+export default App
