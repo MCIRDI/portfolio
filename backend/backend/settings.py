@@ -41,6 +41,7 @@ INSTALLED_APPS = [
      'rest_framework', # Django REST framework
     'rest_framework.authtoken',  # for token-based auth
     'corsheaders',
+    'publications',
 ]
 
 REST_FRAMEWORK = {
